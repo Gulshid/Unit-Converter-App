@@ -6,6 +6,7 @@ class Unitprovider with ChangeNotifier {
   List<Unitcategory> categories = [
     Unitcategory(
       name: 'length',
+      icon: Icon(Icons.rule_folder_rounded, color: Colors.black,),
       units: {
         'Meter': 1.0,
         'Kilometer': 1000.0,
@@ -16,21 +17,25 @@ class Unitprovider with ChangeNotifier {
 
     Unitcategory(
       name: 'Weight',
+      icon:Icon(Icons.line_weight, color: Colors.black,),
       units: {'Gram': 1.0, 'Kilogram': 1000.0, 'Pound': 453.592},
     ),
 
     Unitcategory(
       name: 'Tempreture',
+      icon: Icon(Icons.thermostat, color: Colors.black,),
       units: {'Celsius': 1.0, 'Fahrenheit': 1.0},
     ),
 
     Unitcategory(
       name: 'Time',
+      icon: Icon(Icons.timelapse_rounded, color: Colors.black,),
       units: {'Second': 1.0, 'Minute': 60.0, 'Hour': 3600.0},
     ),
 
     Unitcategory(
       name: 'Area',
+      icon: Icon(Icons.area_chart, color: Colors.black,),
       units: {'Square Meter': 1.0, 'Hectare': 10000.0, 'Acre': 4046.86},
     ),
   ];
