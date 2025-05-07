@@ -4,11 +4,10 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:unit_converter/Model_/unitCategory.dart';
 import 'package:unit_converter/ViewModel/UnitProvider.dart';
-import 'package:unit_converter/Views_/Custom_Clippper.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
-
+  
   @override
   State<HomeView> createState() => _HomeViewState();
 }
@@ -21,7 +20,7 @@ class _HomeViewState extends State<HomeView> {
     return  Scaffold(
       backgroundColor: Colors.lightGreenAccent,
       body: Container(
-         decoration: BoxDecoration(
+            decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [Colors.orangeAccent,Colors.lightGreenAccent],
                 begin: Alignment.topCenter,

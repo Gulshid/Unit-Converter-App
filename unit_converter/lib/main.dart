@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
+import 'package:unit_converter/Routes/Routes.dart';
+import 'package:unit_converter/Routes/RoutesName.dart';
 import 'package:unit_converter/ViewModel/UnitProvider.dart';
-import 'package:unit_converter/Views_/Home_view.dart';
 
 
 void main() {
@@ -39,9 +40,8 @@ class MyApp extends StatelessWidget {
                   ),
                 ),
           
-                // initialRoute: Routesname.authView,
-                // onGenerateRoute: Routes.generateRoute,
-                home: HomeView(),
+                initialRoute: Routesname.home,
+                onGenerateRoute: Routes.generate_Route,
               );
             },
           ),
