@@ -27,21 +27,41 @@ class MyApp extends StatelessWidget {
 
           child: Builder(
             builder: (BuildContext context) {
-              return MaterialApp(
-                debugShowCheckedModeBanner: false,
-                title: 'Unit Converter',
-                theme: ThemeData(
-                  applyElevationOverlayColor: true,
-                  brightness: Brightness.light,
-                  appBarTheme: AppBarTheme(backgroundColor: Colors.teal),
-                  primarySwatch: Colors.blue,
-                  textTheme: Typography.englishLike2018.apply(
-                    fontSizeFactor: 1.sp,
-                  ),
-                ),
-          
-                initialRoute: Routesname.home,
-                onGenerateRoute: Routes.generate_Route,
+              return Consumer<Unitprovider>(
+                builder: (context, provider, _) {
+                  return MaterialApp(
+                    debugShowCheckedModeBanner: false,
+                    title: 'Unit Converter',
+                    themeMode: provider.isDarkMode ? ThemeMode.dark : ThemeMode.light,
+                    theme: ThemeData(
+                      applyElevationOverlayColor: true,
+                      brightness: Brightness.light,
+                      colorScheme: ColorScheme.fromSeed(
+                        seedColor: Colors.teal,
+                        brightness: Brightness.light,
+                      ),
+                      appBarTheme: const AppBarTheme(backgroundColor: Colors.teal),
+                      textTheme: Typography.englishLike2018.apply(
+                        fontSizeFactor: 1.sp,
+                      ),
+                    ),
+                    darkTheme: ThemeData(
+                      brightness: Brightness.dark,
+                      colorScheme: ColorScheme.fromSeed(
+                        seedColor: Colors.teal,
+                        brightness: Brightness.dark,
+                      ),
+                      appBarTheme: const AppBarTheme(backgroundColor: Color(0xFF0F3D3E)),
+                      textTheme: Typography.englishLike2018.apply(
+                        fontSizeFactor: 1.sp,
+                        bodyColor: Colors.white,
+                        displayColor: Colors.white,
+                      ),
+                    ),
+                    initialRoute: Routesname.home,
+                    onGenerateRoute: Routes.generate_Route,
+                  );
+                },
               );
             },
           ),
