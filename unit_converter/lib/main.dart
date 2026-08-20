@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
                 theme: ThemeData(
                   applyElevationOverlayColor: true,
                   brightness: Brightness.light,
-                  appBarTheme: AppBarTheme(color: Colors.teal),
+                  appBarTheme: AppBarTheme(backgroundColor: Colors.teal),
                   primarySwatch: Colors.blue,
                   textTheme: Typography.englishLike2018.apply(
                     fontSizeFactor: 1.sp,
